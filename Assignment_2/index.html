@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal — Dashboard</title>
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">🎓 Student Portal</div>
+        <ul class="nav-menu">
+            <li><a class="nav-item active" href="index.html"><span class="nav-icon">🏠</span> Dashboard</a></li>
+            <li><a class="nav-item" href="profile.html"><span class="nav-icon">👤</span> My Profile</a></li>
+            <li><a class="nav-item" href="results.html"><span class="nav-icon">📊</span> Academic Results</a></li>
+            <li><a class="nav-item" href="attendance.html"><span class="nav-icon">📅</span> Attendance</a></li>
+            <li><a class="nav-item" href="timetable.html"><span class="nav-icon">🕐</span> Timetable</a></li>
+            <li><a class="nav-item" href="fees.html"><span class="nav-icon">💳</span> Fees Payments</a></li>
+            <li><a class="nav-item" href="exams.html"><span class="nav-icon">📝</span> Exams</a></li>
+            <li><a class="nav-item" href="assignments.html"><span class="nav-icon">📋</span> Assignments</a></li>
+            <li><a class="nav-item" href="library.html"><span class="nav-icon">📚</span> Library</a></li>
+            <li><a class="nav-item" href="notifications.html"><span class="nav-icon">🔔</span> Notifications</a></li>
+            <li><a class="nav-item" href="support.html"><span class="nav-icon">🆘</span> Support</a></li>
+            <li><a class="nav-item" href="settings.html"><span class="nav-icon">⚙️</span> Settings</a></li>
+        </ul>
+        <div class="user-profile">
+            <div class="profile-info">
+                <img src="yash.jpg" alt="Profile" class="profile-avatar">
+                <div class="profile-text">
+                    <div class="profile-name">Yashkumar Solanki</div>
+                    <div class="profile-id">2401031000053</div>
+                </div>
+            </div>
+            <button class="logout-btn" onclick="alert('Logged out!')">🚪 Logout</button>
+        </div>
+    </aside>
+    <main class="main-content">
+        <div class="header-top">
+            <div class="breadcrumb">Dashboard</div>
+            <div class="semester-badge">🗓️ Spring 2026 Semester</div>
+        </div>
+        <!-- Welcome Banner -->
+        <div class="welcome-banner">
+            <div class="welcome-content">
+                <div class="welcome-title">Welcome back, Yashkumar! 👋</div>
+                <div class="welcome-subtitle">You have 3 assignments due this week. Your current overall attendance is 88.5%.</div>
+                <div class="banner-buttons">
+                    <button class="btn btn-secondary" onclick="window.location='timetable.html'">View Schedule</button>
+                    <button class="btn btn-primary" onclick="window.location='assignments.html'">Submit Assignments</button>
+                </div>
+            </div>
+            <div class="welcome-icon">🎓</div>
+        </div>
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon attendance">📊</div>
+                <div class="stat-label">Attendance</div>
+                <div class="stat-value">88.5%</div>
+                <div class="stat-change">▲ +2.4%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon gpa">🏆</div>
+                <div class="stat-label">Overall GPA</div>
+                <div class="stat-value">8.42</div>
+                <div class="stat-change">▲ +0.2</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon library">📚</div>
+                <div class="stat-label">Library Books</div>
+                <div class="stat-value">3 Due</div>
+                <div class="stat-change">Return by Feb 28</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon courses">📖</div>
+                <div class="stat-label">Active Courses</div>
+                <div class="stat-value">6</div>
+                <div class="stat-change">In Progress</div>
+            </div>
+        </div>
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Weekly Attendance</div>
+                    <select style="border:1px solid #ddd;padding:0.5rem;border-radius:4px;cursor:pointer;">
+                        <option>This Week</option>
+                        <option>Last Week</option>
+                        <option>This Month</option>
+                    </select>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-bar" style="height:70%;"></div>
+                    <div class="chart-bar" style="height:65%;"></div>
+                    <div class="chart-bar" style="height:75%;"></div>
+                    <div class="chart-bar low" style="height:40%;"></div>
+                    <div class="chart-bar" style="height:70%;"></div>
+                    <div class="chart-bar low" style="height:35%;"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Upcoming Deadlines</div>
+                    <a href="assignments.html" class="card-link">View All</a>
+                </div>
+                <ul class="deadlines-list">
+                    <li class="deadline-item">
+                        <div class="deadline-dot"></div>
+                        <div class="deadline-content">
+                            <div class="deadline-title">Discrete Math Assignment</div>
+                            <div class="deadline-time">⏰ Tomorrow, 10:00 AM</div>
+                            <span class="deadline-tag tag-assignment">Assignment</span>
+                        </div>
+                    </li>
+                    <li class="deadline-item">
+                        <div class="deadline-dot"></div>
+                        <div class="deadline-content">
+                            <div class="deadline-title">Physics Lab Viva</div>
+                            <div class="deadline-time">⏰ Feb 24, 02:00 PM</div>
+                            <span class="deadline-tag tag-lab">Lab</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
